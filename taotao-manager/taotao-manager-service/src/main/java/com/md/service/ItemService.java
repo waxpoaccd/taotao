@@ -1,6 +1,7 @@
 package com.md.service;
 
 import com.md.pojo.TbItem;
+import com.md.tools.EUDataGridResult;
 
 /**
  * @author mengdong
@@ -8,4 +9,6 @@ import com.md.pojo.TbItem;
  */
 public interface ItemService {
     TbItem getItemById(Long itemId);
+
+    EUDataGridResult getItemList(int page, int rows);
 }

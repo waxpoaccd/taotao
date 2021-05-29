@@ -2,6 +2,7 @@ package com.md.controller;
 
 import com.md.pojo.TbItem;
 import com.md.service.ItemService;
+import com.md.tools.EUDataGridResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,11 +20,18 @@ public class ItemController {
     private ItemService itemService;
 
 
-    @RequestMapping("/item/{itemId}")
+
     @ResponseBody
+    @RequestMapping("/item/{itemId}")
     public TbItem getItemById(@PathVariable Long itemId) {
         TbItem tbItem = itemService.getItemById(itemId);
-        System.out.println("--------------------"+tbItem);
         return tbItem;
+    }
+
+    @ResponseBody
+    @RequestMapping("item/list")
+    public EUDataGridResult getItemList(Integer page,Integer rows){
+        EUDataGridResult result = itemService.getItemList(page, rows);
+        return result;
     }
 }
