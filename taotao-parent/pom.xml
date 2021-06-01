@@ -9,7 +9,6 @@
 
     <name>taotao-parent</name>
     <url>http://maven.apache.org</url>
-
     <!-- 集中定义依赖版本号 -->
     <properties>
         <junit.version>4.12</junit.version>
@@ -207,7 +206,7 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                    <encoding>UTF-8</encoding>
+                    <encoding>utf-8</encoding>
                 </configuration>
             </plugin>
         </plugins>

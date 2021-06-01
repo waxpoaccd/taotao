@@ -11,17 +11,15 @@
     <packaging>pom</packaging>
     <name>taotao-manager</name>
     <url>http://maven.apache.org</url>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <modules>
         <module>taotao-manager-pojo</module>
         <module>taotao-manager-mapper</module>
         <module>taotao-manager-service</module>
         <module>taotao-manager-web</module>
     </modules>
-
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <!-- 添加依赖 -->
     <dependencies>
@@ -39,6 +37,7 @@
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <configuration>
+                    <uriEncoding>UTF-8</uriEncoding>
                     <port>8080</port>
                     <path>/</path>
                 </configuration>

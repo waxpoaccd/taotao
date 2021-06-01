@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class PageController {
+
     /**
      * 首页
      *
      * @return
      */
-    @RequestMapping("/")
+    @RequestMapping(value = "/")
     public String showIndex() {
-        System.out.println("=====showIndex");
         return "index";
     }
 
@@ -30,7 +30,6 @@ public class PageController {
      */
     @RequestMapping("/{page}")
     public String showPage(@PathVariable String page) {
-        System.out.println("=====showPage："+page);
         return page;
     }
 }

@@ -12,11 +12,9 @@
 
     <name>taotao-manager-mapper</name>
     <url>http://maven.apache.org</url>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     <dependencies>
         <!-- 依赖与pojo子模块 -->
         <dependency>
