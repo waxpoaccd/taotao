@@ -2,6 +2,7 @@ package com.md.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.md.mapper.TbItemCatMapper;
 import com.md.mapper.TbItemMapper;
 import com.md.pojo.TbItem;
 import com.md.pojo.TbItemExample;
@@ -22,6 +23,9 @@ public class ItemServiceImpl implements ItemService {
     @Autowired
     private TbItemMapper tbItemMapper;
 
+    @Autowired
+    private TbItemCatMapper tbItemCatMapper;
+
     @Override
     public TbItem getItemById(Long itemId) {
         return tbItemMapper.selectByPrimaryKey(itemId);
@@ -41,4 +45,5 @@ public class ItemServiceImpl implements ItemService {
         result.setTotal(pageInfo.getTotal());
         return result;
     }
+
 }

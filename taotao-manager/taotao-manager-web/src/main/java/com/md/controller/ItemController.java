@@ -1,6 +1,7 @@
 package com.md.controller;
 
 import com.md.pojo.TbItem;
+import com.md.pojo.TbItemCat;
 import com.md.service.ItemService;
 import com.md.tools.EUDataGridResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,4 +35,6 @@ public class ItemController {
         EUDataGridResult result = itemService.getItemList(page, rows);
         return result;
     }
+
+
 }
